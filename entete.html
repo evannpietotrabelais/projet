@@ -30,15 +30,15 @@
     <!-- Navbar -->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Rechercher dans la catégorie (saisie du nom de l'auteur)</a>
+        <a class="navbar-brand" href="#">BiblioDrive </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="mynavbar">
-            <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Tapez votre recherche">
+            <form class="d-flex" action = "recherche_auteur.php" method = "get" >
+                <input class="form-control me-2" type="text" placeholder="Recherche un auteur" name="r">
                 <button class="btn btn-primary" type="button">Rechercher</button>
                 <button class="btn btn-primary" type="button">Panier</button>
 
@@ -46,13 +46,6 @@
         </div>
     </div>
 </nav>
-
-<!-- Dernieres acquisitions -->
-
-<div class="container-fluid mt-3">
-    <p><h3 align="center"><font color="green">Dernières acquisitions</font></h3></p>
-  </div>
-
 
 </body>
 </html>

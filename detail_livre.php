@@ -15,23 +15,24 @@ include 'entete.html';
 require_once('connexion.php');
 
 if(isset($_GET['id'])) {
-    $id = intval($_GET['id']); // sécurisation de l'ID
+    $id = ($_GET['id']); // sécurisation de l'ID
 
     $stmt = $connexion->prepare("SELECT * FROM livre WHERE nolivre = ?");
     $stmt->execute([$id]);
     $livre = $stmt->fetch(PDO::FETCH_OBJ);
 
     if($livre) {
-        echo '<h1>' . htmlspecialchars($livre->titre) . '</h1>';
+        echo '<h1>' .($livre->titre) . '</h1>';
 
     echo '<div class="row">';
-   // Affichage de lA description
+   
+        // Affichage de la description
         echo '<div class="col-md-8">';      
-        echo '<p><strong>Résumé du livre :</strong><br>' . nl2br(htmlspecialchars($livre->detail)) . '</p>';
+        echo '<p><strong>Résumé du livre :</strong><br>' . ($livre->detail) . '</p>';
         echo '</div>';
         // Affichage de l'image directement
         echo '<div class="col-md-4">';
-        echo '<p><strong></strong><br><img src="covers/' . htmlspecialchars($livre->photo) . '" alt="Image du livre" style="max-width:300px;"></p>';
+        echo '<p><strong></strong><br><img src="covers/' . ($livre->photo) . '" alt="Image du livre" style="max-width:300px;"></p>';
         echo '</div>';
 
 
@@ -44,7 +45,6 @@ if(isset($_GET['id'])) {
     echo '<p>ID du livre non spécifié.</p>';
 }
 ?>
-
 <p><a href="lister_livres.php" class="btn btn-primary mt-3">← Retour à la liste</a></p>
 </div>
 </body>
