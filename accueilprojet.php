@@ -1,5 +1,4 @@
 
-
 <!-- include entete -->
 <?php
 include 'entete.html';
