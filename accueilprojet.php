@@ -4,6 +4,10 @@
 include 'entete.html';
 ?>
 
+<?php
+include 'authentification.php';
+?>
+
 <!-- Dernieres acquisitions -->
 
 <div class="container-fluid mt-3">

@@ -3,17 +3,15 @@
 include 'entete.html'; 
 require_once('connexion.php');
 
+$stmt = $connexion->prepare("SELECT * FROM livre 
+inner join auteur on (livre.noauteur = auteur.noauteur)
+Where nolivre = ?");
 
+if(isset($_GET['id'])) {
+    $id = ($_GET['id']);
 
-    $stmt = $connexion->prepare("SELECT * FROM livre 
-    inner join auteur on (livre.noauteur = auteur.noauteur)
-    Where nolivre = ?");
-    
-    if(isset($_GET['id'])) {
-
-    $stmt->execute();
+    $stmt->execute([$id]);
     $livre = $stmt->fetch(PDO::FETCH_OBJ);
-
 
     if($livre) {
        
