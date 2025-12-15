@@ -1,7 +1,7 @@
 
 <?php 
 include 'entete.html'; 
-require_once('connexion.php');
+require_once('connexion_base.php');
 
 $stmt = $connexion->prepare("SELECT * FROM livre");
 $stmt->setFetchMode(PDO::FETCH_OBJ);

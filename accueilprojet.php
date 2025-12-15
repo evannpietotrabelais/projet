@@ -3,7 +3,7 @@
 <?php
 include 'entete.html';
 ?>
-
+<!-- include authentification -->
 <?php
 include 'authentification.php';
 ?>
@@ -15,7 +15,6 @@ include 'authentification.php';
   </div>
 
 <!-- Carousel -->
- 
  <?php 
  include 'recup_carousel.php';
   ?>

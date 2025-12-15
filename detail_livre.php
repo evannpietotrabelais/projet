@@ -1,7 +1,7 @@
 
 <?php 
 include 'entete.html'; 
-require_once('connexion.php');
+require_once('connexion_base.php');
 
 $stmt = $connexion->prepare("SELECT * FROM livre 
 inner join auteur on (livre.noauteur = auteur.noauteur)
@@ -29,6 +29,8 @@ if(isset($_GET['id'])) {
         echo '<p><strong></strong><br><img src="covers/' . ($livre->photo) . '" alt="Image du livre" style="max-width:300px;"></p>';
         echo '</div>';
         echo '</div>';
+
+        echo 'Pour pouvoir réserver vous devez vous identifiez';
     } 
     else {
         echo '<p>Livre non trouvé.</p>';

@@ -1,7 +1,7 @@
 <!-- include entete -->
 <?php
 include 'entete.html';
-require_once('connexion.php'); 
+require_once('connexion_base.php'); 
 
  
  $stmt = $connexion->prepare ("SELECT * FROM livre
@@ -18,6 +18,6 @@ require_once('connexion.php');
   // Génère un lien vers la page details_livres.php avec l'ID du livre
    echo '<a href="http://localhost/projetevann/detail_livre.php?id=' . $enregistrement -> nolivre . '">
            <p><strong>Titre :</strong> ' 
-           . htmlspecialchars($enregistrement -> titre) . '</a></p>';
+           . ($enregistrement -> titre) . '</a></p>';
 }
 ?>

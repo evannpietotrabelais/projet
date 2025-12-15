@@ -20,6 +20,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
+          
               <a class="navbar-brand" href="accueilprojet.php">Accueil</a>
           
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -31,11 +32,16 @@
                   <li class="nav-item">
                   </li>
                 </ul>
-          
+                
+                <!--recherche_auteur -->
                 <form class="d-flex" method="get" action="recherche_auteur.php">
-                    <input class="form-control me-2" type="text" name="r" placeholder="Rechercher par nom d'auteur">
-                    
-                    <button class="btn btn-primary" type="submit">Panier</button>
+                  <input class="form-control me-2" type="text" name="r" placeholder="Rechercher par nom d'auteur">
+                </form>
+                
+                <!-- Panier -->
+                <form class="d-flex" method="get" action="panier.php">   
+                  <button class="btn btn-primary" type="submit">Panier</button>
+                                      
                 </form>                  
               </div>
             </div>

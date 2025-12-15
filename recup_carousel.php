@@ -13,7 +13,6 @@ $livre = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <?php
         $active = true;
-
         foreach ($livre as $livre) {
             echo '<div class="carousel-item '.($active ? 'active' : '').'">';
             echo '<img src="covers/'.$livre['photo'].'" class="d-block mx-auto" alt="Livre" style="width: 20%" >';
@@ -21,7 +20,6 @@ $livre = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $active = false;
         }
         ?>
-
     </div>
 
     <!-- Boutons précédent/suivant -->

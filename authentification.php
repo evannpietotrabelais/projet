@@ -1,9 +1,9 @@
 
 <html>
 <body>
-<form action="welcome.php" method="post">
-Name: <input type="text" name="txtName"><br>
-E-mail: <input type="text" name="txtEmail"><br>
+<form action="authen.php" method="post">
+Identifiant: <input type="text" name="identifiant"><br>
+Mot de passe : <input type="text" name="mdp"><br>
 <input type="submit">
 </form>
 </body>
