@@ -21,16 +21,17 @@ if (isset($_SESSION['profil'])) {
     }
 } else {
     if (!isset($_GET['connect'])) {
-        echo '<center>
+        echo '
+        <div style="display:flex; justify-content:flex-end; padding-right: 50px;">
             <form action="" method="GET">
-                <h5 class="text-center text-decoration-underline">Se connecter</h5><br><br>
+                <h5 style="text-align:center; text-decoration:underline;">Se connecter</h5><br><br>
                 E-mail :<br>
                 <input type="text" name="mel"><br><br>
                 Mot de passe :<br>
                 <input type="password" name="pwd"><br><br>
                 <input type="submit" name="connect" value="Connexion">
             </form>
-        </center>';
+        </div>';
     } else {
         require_once 'connexion_base.php';
         $stmt = $connexion->prepare("SELECT * FROM utilisateur WHERE mel = :mail AND motdepasse = :pwd");

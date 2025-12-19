@@ -9,7 +9,6 @@ try {
 } catch (Exception $e) {
   echo "Connexion à la base impossible : ", $e->getMessage();
   die();
-
 }
 
 

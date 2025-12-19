@@ -21,3 +21,5 @@ require_once('connexion_base.php');
            . ($enregistrement -> titre) . '</a></p>';
 }
 ?>
+
+<?php include 'authentification.php'; ?>

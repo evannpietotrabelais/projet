@@ -1,21 +1,22 @@
+<?php include 'entete.html'; ?>
 
-<!-- include entete -->
-<?php
-include 'entete.html';
-?>
+<div class="container">
+    <div class="row">
 
- <!-- COLONNE DROITE : authentification -->
- <div class="col-md-2 ms-auto">
-      <?php include 'authentification.php'; ?>
+        <!-- Contenu principal -->
+        <div class="col-md-9">
+            <h3 class="text-center text-success my-4">
+                Dernières acquisitions
+            </h3>
+
+            <!-- Carousel -->
+            <?php include 'recup_carousel.php'; ?>
+        </div>
+
+        <!-- Colonne droite : authentification -->
+        <div class="col-md-3">
+            <?php include 'authentification.php'; ?>
+        </div>
+
     </div>
-
-<!-- Dernieres acquisitions -->
-<div class="col-md-12 text-right">
-    <p><h3 align="center"><font color="green">Dernières acquisitions</font></h3></p>
-  </div>
-
-<!-- Carousel -->
-
- <?php 
- include 'recup_carousel.php';
-  ?>
+</div>

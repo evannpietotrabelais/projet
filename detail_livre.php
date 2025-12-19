@@ -1,6 +1,9 @@
 
 <?php 
 include 'entete.html'; 
+include 'authentification.php'; 
+?>
+<?php
 require_once('connexion_base.php');
 
 $stmt = $connexion->prepare("SELECT * FROM livre 
@@ -41,6 +44,7 @@ else {
     echo '<p>ID du livre non spécifié.</p>';
 }
 ?>
+
 <p><a href="lister_livres.php" class="btn btn-primary mt-3">← Retour à la liste</a></p>
 </div>
 
