@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
           
-              <a class="navbar-brand" href="accueilprojet.php">Accueil </a>
+              <a class="navbar-brand" href="accueiladmin.php">Accueil Admin </a>
           
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -32,16 +32,17 @@
                   </li>
                 </ul>
                 
-                <!--recherche_auteur -->
-                <form class="d-flex" method="get" action="recherche_auteur.php">
-                  <input class="form-control me-2" type="text" name="r" placeholder="Rechercher par nom d'auteur">
-                </form>
+    
+                <div class="d-flex gap-2">
+                    <form method="get" action="creer_membre.php">
+                        <button class="btn btn-primary" type="submit">Créer un membre</button>
+                    </form>
                 
-                <!-- Panier -->
-                <form class="d-flex" method="get" action="panier.php">   
-                  <button class="btn btn-primary" type="submit"> Panier</button>
-                                      
-                </form>                  
+                    <form method="get" action="ajouter_livre.php">
+                        <button class="btn btn-primary" type="submit">Ajouter un livre</button>
+                    </form>
+                </div>
+                
               </div>
             </div>
           </nav>          
@@ -49,8 +50,7 @@
     </div>
 
     <!-- IMAGE Chateau -->
-    <img src="entete/chateau.png"  alt="chateau" style="height:150px;" class="ms-2">
+    <img src="entete/chateau.png" alt="chateau" style="height:150px;" class="ms-3">
 
 </div>
 </body>
-

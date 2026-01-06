@@ -1,14 +1,22 @@
 <?php 
-include 'entete.html'
+include 'entete.html';
 ?>
 
-<!-- Colonne droite : authentification -->
-<div class="col-md-12">
-            <?php include 'authentification.php'; ?>
-        </div>
-<div style=" width:400px; padding:15px;">
-    <h3 style="color:green; text-align:center;">Votre panier </h3>
-    <p style="text-align:center; font-size:12px; color:blue;">
-        (encore X réservation possible, X emprunt en cours)
-    </p>
+<div class="container mt-2">
+  <div class="row">
 
+    <!-- Colonne gauche : panier -->
+    <div class="col-md-8" style="padding: 15px;">
+      <h3 class="text-success text-center">Votre panier</h3>
+      <p class="text-primary text-center" style="font-size: 12px;">
+          (encore X réservation possible, X emprunt en cours)
+      </p>
+    </div>
+
+    <!-- Colonne droite : authentification -->
+    <div class="col-md-4">
+      <?php include 'authentification.php'; ?>
+    </div>
+
+  </div>
+</div>

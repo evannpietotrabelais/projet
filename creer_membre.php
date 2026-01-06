@@ -1,13 +1,8 @@
-
 <?php
 session_start();
 require_once('connexion_base.php');
-
-if (!isset($_SESSION['profil']) || $_SESSION['profil'] != 'admin') {
-    header("Location: admin.php");
-    exit;
-}
 ?>
+
 <h3>Créer un nouveau membre</h3>
 
 <form method="post">
@@ -60,9 +55,9 @@ if (isset($_POST['creer'])) {
     $stmt->bindValue(':profil', $_POST['profil']);
     
     if ($stmt->execute()) {
-        echo "<p Membre créé avec succès !</p>";
+        echo "<p> Membre créé avec succès !</p>";
     } else {
-        echo "<p Erreur lors de la création.</p>";
+        echo "<p> Erreur lors de la création.</p>";
     }
 }
 ?>

@@ -1,0 +1,1 @@
+<?php include 'enteteadmin.html'; ?>

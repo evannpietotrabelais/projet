@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('connexion_base.php');
 
 if (isset($_SESSION['profil'])) {
     if (!isset($_POST['deconnect'])) {
@@ -19,10 +20,13 @@ if (isset($_SESSION['profil'])) {
         header("Location: http://localhost/projetevann/accueilprojet.php");
         exit;
     }
-} else {
+} 
+
+
+else {
     if (!isset($_GET['connect'])) {
-        echo '
-        <div style="display:flex; justify-content:flex-end; padding-right: 50px;">
+        echo 
+        '<div style="display:flex; justify-content:flex-end; padding-right: 50px;">
             <form action="" method="GET">
                 <h5 style="text-align:center; text-decoration:underline;">Se connecter</h5><br><br>
                 E-mail :<br>
@@ -50,7 +54,18 @@ if (isset($_SESSION['profil'])) {
             $_SESSION['adresse'] = $enregistrement->adresse;
             $_SESSION['ville'] = $enregistrement->ville;
             $_SESSION['codepostal'] = $enregistrement->codepostal;
-        } else {
+
+            if ($enregistrement->profil === 'admin@admin.fr') {
+                header("Location: accueiladmin.php");
+                exit;
+            } else {
+                header("Location: accueilprojet.php");
+                exit;
+            }
+            
+        }
+        
+         else {
             echo '<center>
                 <form action="" method="post">
                     <br><br>
