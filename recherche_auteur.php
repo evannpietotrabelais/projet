@@ -15,7 +15,7 @@ require_once('connexion_base.php');
                 WHERE auteur.nom LIKE :nom
             ");
 
-            $stmt->bindValue(":nom", "%" . "%");
+            $stmt->bindValue(":nom", "%" . $_GET ['r'] . "%");
             $stmt->setFetchMode(PDO::FETCH_OBJ);
             $stmt->execute();
 
