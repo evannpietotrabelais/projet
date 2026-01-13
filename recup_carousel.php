@@ -3,10 +3,10 @@
 $pdo = new PDO("mysql:host=localhost;dbname=projetevann;charset=utf8", "root", "");
 
 
-
 $stmt = $pdo->query("SELECT photo FROM livre ORDER BY dateajout DESC LIMIT 3");
 $livre = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 
 <div id="carouselLivres" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
