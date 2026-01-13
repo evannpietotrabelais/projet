@@ -2,46 +2,49 @@
     include 'entete.php';
 ?>
 
-<div class="row container-fluid"> 
-    <div class="col-md-10 container-fluid texteCentrer">  
-        <h2> Votre panier </h2>
+<div class="container-fluid">
+    <div class="row mt-3"> 
         
-        <?php
-            $panier = array();
+        <div class="col-md-9 texteCentrer">  
+            <h2> Votre panier </h2>
             
-            if (isset($_SESSION['panier']) && ($_SESSION['panier'] != "")){
-                if ($_SESSION['panier'] == array()){
-                    echo 'Aucun livre dans le panier !';
-                }
-                else{
-                    for($x = 0; $x < count($_SESSION['panier']); $x++) {
-
-                        echo '<div class="row">
-                                <div class="col-md-7">
-                                <a href="http://localhost/projet/detail_livre.php?titre='.$_SESSION['panier'][$x][1].'">
-                            
-                                </div>
-                                <br><br>
-                            ';               
+            <?php
+                $panier = array();
+                
+                if (isset($_SESSION['panier']) && ($_SESSION['panier'] != "")){
+                    if ($_SESSION['panier'] == array()){
+                        echo 'Aucun livre dans le panier !';
+                    }
+                    else{
+                        for($x = 0; $x < count($_SESSION['panier']); $x++) {
+                            echo '<div class="row mb-2">
+                                    <div class="col-md-12">
+                                        <a href="http://localhost/projet/detail_livre.php?titre='.$_SESSION['panier'][$x][1].'">
+                                            '.$_SESSION['panier'][$x][1].'
+                                        </a>
+                                    </div>
+                                  </div>';               
                         }             
-                    
+                        
                         echo '
-                        <form method="post">
+                        <form method="post" class="mt-3">
                             <input type="submit" name="supprimer" value="Vider le panier" class="btn btn-outline-danger">
                         </form>';
-                                                   
+                    }
                 }
-            }
-            else{
-                echo "connectez vous avant d'acceder au panier";
-            }
-            
-            if (isset($_POST['supprimer'])){
-                echo 'supprimer';
-            }
-        ?>
-    
-    </div>
-    <div class="col-md-12">
+                else{
+                    echo "Connectez-vous avant d'accéder au panier";
+                }
+                
+                if (isset($_POST['supprimer'])){
+                  
+                    $_SESSION['panier'] = array();
+                    echo '<p class="text-danger mt-2">Le panier a été vidé.</p>';
+                }
+            ?>
+           
+        </div>
+
+        <div class="col-md-3 ">
             <?php include 'authentification.php'; ?>
         </div>

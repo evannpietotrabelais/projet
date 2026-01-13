@@ -5,6 +5,10 @@
     <?php
         require_once('connexion_base.php');
 
+        if( $_SESSION['profil'] != "admin"){
+            header("location: accueilprojet.php");
+        }
+
         $mel = $_POST['mel'];
         $motdepasse = $_POST['motdepasse'];
         $nom = $_POST['nom'];

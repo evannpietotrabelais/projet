@@ -1,4 +1,11 @@
-<?php include 'enteteadmin.php'; ?>
+<?php include 'enteteadmin.php'; 
+
+if( $_SESSION['profil'] != "admin"){
+    header("location: accueilprojet.php");
+}
+?>
+
+
 
 <div class="container-fluid mt-3">
     <div class="row justify-content-end">

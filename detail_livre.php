@@ -41,7 +41,7 @@ require_once('connexion_base.php');
                     echo '</div>';
 
                     echo '<p class="text-danger mt-3">
-                            Pour pouvoir réserver vous devez vous identifier
+                            Pour pouvoir réserver vous devez vous identifier (provisoire)
                           </p>';
 
                 } else {
