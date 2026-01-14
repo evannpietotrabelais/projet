@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,13 +13,14 @@
 <body>
 <div class="d-flex justify-content-between align-items-start w-100">
 
-    <!-- Description + Navbar -->
-    <div class="flex-grow-1">
-
-        <header><h6>
+ 
+    <div class="row container-fluid">
+        <div class="col-md-10">
+        <p>
             La Bibliothèque de Moulinsart est fermée au public jusqu'à nouvel ordre. 
-            Mais il vous est possible de réserver et retirer vos livres via notre service Biblio Drive !
-        </h6></header><br>
+            Mais il vous est possible de réserver et retirer vos livres via notre service Biblio Drive  
+        </p>
+        <br>
 
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
@@ -32,12 +37,12 @@
                   </li>
                 </ul>
                 
-                <!--recherche_auteur -->
+              
                 <form class="d-flex" method="get" action="recherche_auteur.php">
                   <input class="form-control me-2" type="text" name="r" placeholder="Rechercher par nom d'auteur">
                 </form>
                 
-                <!-- Panier -->
+              
                 <form class="d-flex" method="get" action="panier.php">   
                   <button class="btn btn-primary" type="submit"> Panier</button>
                                       
@@ -48,9 +53,11 @@
 
     </div>
 
-    <!-- IMAGE Chateau -->
-    <img src="entete/chateau.png" alt="chateau" style="height:150px;" class="ms-3">
-
+    
+    <div class="col-md-2 container-fluid">
+             <a href="accueilprojet.php"><img src="./entete/chateau.png" class="float-end" width="100%"></a>
+        </div>
+    </div>
 </div>
 </body>
 
