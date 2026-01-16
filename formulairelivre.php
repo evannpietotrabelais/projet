@@ -39,7 +39,7 @@ include 'enteteadmin.php';
 
 
                 <br><br>
-                ISBN 13 : <input type="text" name="isbn13"required>
+                ISBN 13 : <input type="number" name="isbn13"required>
 
                 <br><br>
                 Année de parution : <input type="number" name="anneeparution"required>

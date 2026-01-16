@@ -40,7 +40,7 @@
     ?>
     
     <div class="row container-fluid">
-        <div class="col-md-10 texteCentrer">
+        <div class="col-md-8 texteCentrer">
             <h1> l'utilisateur à été ajouté !</h1>
         </div>
 
